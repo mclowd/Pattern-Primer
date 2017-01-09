@@ -33,7 +33,10 @@ body {
 <h1>Mclowd 2013 Pattern Library</h1>
 <p>This library contains snippets of code used in the Mclowd Platform, to demonstrate how they should be written in HTML, and how that HTML is styled.<br>
 Repo is at <a href="https://github.com/mclowd/Pattern-Primer">https://github.com/mclowd/Pattern-Primer</a></p>
-<p><a href="2016-index.php">2016 New Style (login page styling)</a> <a href="2017-index.php">2017 Responsive</a>
+<ul>
+    <li><a href="2016-index.php">2016 New Style</a></li>
+    <li><a href="2017-index.php">2017 Responsive</a></li>
+</ul>
 <?php
 $files = array();
 $handle=opendir('patterns');

@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>2016 Pattern Primer</title>
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="newstyle.css">
 <style>
 body {
@@ -33,7 +34,10 @@ body {
 <h1>Mclowd 2016 Pattern Library</h1>
 <p>This library contains snippets of code used in the Mclowd Platform, to demonstrate how they should be written in HTML, and how that HTML is styled.<br>
 Repo is at <a href="https://github.com/mclowd/Pattern-Primer">https://github.com/mclowd/Pattern-Primer</a></p>
-<p><a href="2013-index.php">2013 Original</a> <a href="2017-index.php">2017 Responsive</a>
+<ul>
+    <li><a href="2013-index.php">2013 Original</a></li>
+    <li><a href="2017-index.php">2017 Responsive</a></li>
+</ul>
 <?php
 $files = array();
 $handle=opendir('2016-patterns');
