@@ -8,6 +8,9 @@
 .pattern {
     clear: both;
     overflow: hidden;
+    border: 1px solid #ccc;
+    padding-top: 20px;
+    margin-top: 20px;
 }
 .pattern .display {
     width: 65%;
