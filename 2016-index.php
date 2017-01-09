@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Pattern Primer</title>
+<title>2016 Pattern Primer</title>
 <link rel="stylesheet" href="newstyle.css">
 <style>
 body {
