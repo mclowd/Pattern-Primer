@@ -3,30 +3,36 @@
 <head>
 <meta charset="utf-8">
 <title>Pattern Primer</title>
-<link rel="stylesheet" href="global.css">
+<link rel="stylesheet" href="style.css">
 <style>
+body {
+    padding: 40px;
+}
 .pattern {
     clear: both;
     overflow: hidden;
     border: 1px solid #ccc;
     padding-top: 20px;
-    margin-top: 20px;
+    margin: 20px 0;
+    background-color: #fff;
 }
-.pattern .display {
+.pattern .patternDisplay {
     width: 65%;
     float: left;
 }
-.pattern .source {
+.pattern .patternSource {
     width: 30%;
     float: right;
 }
-.pattern .source textarea {
+.pattern .patternSource textarea {
     width: 90%;
 }
 </style>
 </head>
 <body>
-
+<h1>Mclowd Pattern Library</h1>
+<p>This library contains snippets of code used in the Mclowd Platform, to demonstrate how they should be written in HTML, and how that HTML is styled.<br>
+Repo is at <a href="https://github.com/mclowd/Pattern-Primer">https://github.com/mclowd/Pattern-Primer</a></p>
 <?php
 $files = array();
 $handle=opendir('patterns');
@@ -38,10 +44,10 @@ endwhile;
 sort($files);
 foreach ($files as $file):
     echo '<div class="pattern">';
-    echo '<div class="display">';
+    echo '<div class="patternDisplay">';
     include('patterns/'.$file);
     echo '</div>';
-    echo '<div class="source">';
+    echo '<div class="patternSource">';
     echo '<textarea rows="6" cols="30">';
     echo htmlspecialchars(file_get_contents('patterns/'.$file));
     echo '</textarea>';
