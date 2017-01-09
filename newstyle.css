@@ -1,0 +1,445 @@
+@import url('typography.css');
+@import url('buttons.css');
+@import url('forms.css');
+
+/** Colours
+ *
+ * 5a79ac   New Blue
+ * 0f3c86   New Dark Blue
+ * 20b8a0   Turquoise
+ * 33cc94   Turquoise2
+ * 57cab7   Light Turquoise
+ * 19b27a   Dark Turquoise
+ * e6e6e6   Grey 1 (Light)
+ * 333      Grey 2 (Dark)
+*/
+
+/* common alignment classes */
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearleft {
+    clear: left;
+}
+
+.hidden {
+    display: none;
+}
+
+.textleft,
+th.textleft,
+td.textleft,
+tr.textleft th,
+tr.textleft td {
+    text-align: left;
+}
+
+.textright,
+th.textright,
+td.textright,
+tr.textright th,
+tr.textright td {
+    text-align: right;
+}
+
+.textcenter,
+th.textcenter,
+td.textcenter,
+tr.textcenter th,
+tr.textcenter td {
+    text-align: center;
+}
+
+/* Public page elements */
+
+#loading {
+    display: none;
+    left: 45%;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    border: 1px solid #ccc;
+    z-index: 999;
+    background: #fff;
+}
+
+/*
+#content h1 {
+    background: none;
+    color: #333;
+    padding: 0;
+}*/
+
+.content_container_custom {
+    background: none !important;
+    border: none !important;
+}
+
+.new-body {
+    background-attachment: fixed;
+    background-color: #464646;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.generic-platform-signup-body {
+    background: url(../images/platform_changes/generic_sign_up_bg.jpg);
+}
+
+.practitioner-platform-signup-body {
+    background: url(../images/platform_changes/practitioner_sign_up_bg.jpg);
+}
+
+.trustee-platform-sign-up-body,
+.password-reset-sign-up-body {
+    background: url(../images/platform_changes/trustee_sign_up_bg.jpg);
+}
+
+.platform-signup-body {
+    background: url(../images/platform_changes/background_rpt.png) repeat;
+}
+
+.platform-signup-logo {
+    background: url(../images/platform_changes/mclowd-platform-logo.png) left 10px no-repeat;
+    display: block;
+    left: 8px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 20px 0;
+    position: relative;
+    width: 160px;
+    z-index: 2;
+}
+
+.platform-signup-logo a {
+    direction: ltr;
+    display: block;
+    text-indent: -9999px;
+    width: 165px;
+}
+
+.platform-signup-twothird {
+    background-color: #fff;
+    border-top: 4px solid #5a79ac;
+    margin: auto;
+    width: 610px;
+}
+
+.platform-signup-fieldset {
+    border-top: none;
+    margin-top: 0 !important;
+    width: auto !important;
+    -webkit-box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.25);
+}
+
+.platform-signup-fields {
+    margin: 0 30px;
+}
+
+.platform-signup-form-row {
+    margin: 0 auto;
+    width: 255px;
+}
+
+.platform-signup-form-row.left {
+    margin-right: 30px;
+}
+
+.platform-signup-form-row input[type=text],
+.platform-signup-form-row input[type=password],
+.platform-signup-form-row input[type=email],
+.platform-signup-form-row select {
+    width: 255px;
+}
+
+.platform-signup-form-row input.double {
+    width: 550px;
+}
+
+.platform-signup-signin-check label {
+    position: relative;
+    top: 2px;
+}
+
+/* special error display for public pages */
+.login_container .input-box .error {
+    margin: 0 0 15px 0;
+}
+
+.platform-signin-error {
+    font-weight: 600;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.platform-signup-accept-terms {
+    clear: both;
+    margin: 0 auto;
+    width: 335px;
+}
+
+.platform-signup-accept-terms label {
+    font-weight: 400;
+}
+
+.platform-signup-accept-terms .error {
+    display: block;
+    clear: both;
+    margin-left: 23px;
+}
+
+.platform-signup-form-lbl {
+    position: relative;
+    top: 2px;
+}
+
+.platform-signup-form-lbl > span {
+    color: #5a79ac !important
+}
+
+.platform-signup-form-button {
+    margin: 20px auto 20px auto !important;
+    width: 164px !important;
+}
+
+.platform-signup-main-header {
+    color: #333 !important;
+    display: block;
+    font-family: 'Signika', sans-serif !important;
+    font-size: 35px !important;
+    font-weight: 300;
+    margin: 20px;
+    /*padding: 20px 0 !important;*/
+    text-align: center;
+}
+
+.singup_practitioner_checkfield {
+    margin: 0 0 17px 20px;
+    width: 275px;
+}
+
+.singup_practitioner_checkfield label {
+    color: #444 !important;
+    font-size: 14px !important;
+    margin: -6px 6px;
+}
+
+.singup_practitioner_checkfield input[type=checkbox] {
+    float: left;
+    margin: 0 !important;
+    padding: 0;
+}
+
+.practitioner_singup_checkfield_row {
+    margin: 0 0 17px 0
+}
+
+.signup_step2_fieldset2 p {
+    text-align: center
+}
+
+.signup_step2_fieldset2_row {
+    float: left;
+    margin: 10px 0 !important;
+    margin-bottom: 35px !important;
+    width: 200px;
+}
+
+.signup_step2_fieldset2_row input[type=radio] {
+    margin: 6px 0 0 0 !important
+}
+
+.signup_step2_fieldset2_main_row {
+    margin: auto;
+    width: 400px;
+}
+
+.signup_step2_fieldset2 > .row {
+    margin-bottom: 0 !important;
+    margin-top: 15px;
+}
+
+.signup_step2_fieldset2 > .row > p {
+    color: #444 !important;
+    font-size: 14px !important;
+}
+
+.corporateDetails_signup2 {
+    padding-bottom: 30px
+}
+
+/*.ui-icon-circle-triangle-e,
+.ui-icon-circle-triangle-w {
+    float: none !important;
+    margin: 0 !important;
+    position: initial !important; }
+*/
+.fund_setup_main_header {
+    background: none !important;
+    font-weight: 300 !important;
+    margin-top: 34px;
+}
+
+.platform-sign-up-login {
+    background: url(../images/platform_changes/sign_in_bg.jpg) center top repeat-x #e1f3f5 !important
+}
+
+.platform-signup-signin-check {
+    display: block;
+    margin: 5px auto;
+    width: 170px;
+}
+
+.platform_signin_login_container {
+    /*padding-bottom: 20px;*/
+    background-color: #fff;
+    border: 0;
+    border-top: 4px solid #5a79ac;
+    clear: both;
+    margin: auto;
+    width: 800px;
+    -webkit-box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.25);
+}
+
+.platform_signin_login_btn {
+    width: 165px;
+    margin: 30px auto;
+}
+
+.password-reset-signin-btn {
+    width: 165px;
+    margin: 0 auto 30px auto;
+}
+
+.platform-signin-forgot-password,
+.platform-signin-forgot-password:link,
+.platform-signin-forgot-password:visited {
+    color: #505050;
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 24px;
+    left: 60px;
+    margin-bottom: 20px;
+    position: relative;
+    text-decoration: none;
+}
+
+.platform-signin-forgot-password:focus,
+.platform-signin-forgot-password:hover,
+.platform-signin-forgot-password:active {
+    text-decoration: underline;
+}
+
+.login_container {
+    width: 50%;
+    margin: auto;
+    float: left;
+    background: #fff;
+}
+
+.login_container_fluid {
+    width: 100%;
+}
+
+.logout_container {
+    width: 100%;
+    margin: auto;
+    float: left;
+    background: #fff;
+}
+
+.logout_container_content {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    min-height: 100px;
+}
+
+.login #content_container {
+    padding: 0 !important
+}
+
+.password-reset-content p {
+    color: #444 !important;
+    font-size: 14px !important;
+    margin: 0 0 1px 0 !important;
+    text-align: center;
+}
+
+.password-reset-twothird {
+    background-color: #fff;
+    border-top: 4px solid #5a79ac;
+    margin: auto;
+    width: 400px;
+}
+
+/* Bottom Row Green subpanel*/
+.platform-signup-bottom-row {
+    float: left;
+    background: #20b8a0;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /*top: 20px;*/
+    width: 100%;
+}
+
+.platform-signup-bottom-inner-row {
+    margin: 15px 30px 30px 30px;
+}
+.platform-signup-bottom-inner-row-wide {
+    margin: 15px 0 15px 250px;
+}
+
+.platform-signup-bottom-row h2,
+.platform-signup-bottom-row p {
+    color: #fff;
+}
+
+.platform-signup-bottom-row h2 {
+    margin-bottom: 15px;
+}
+
+.platform_signin_para {
+    margin: 15px 10px;
+    font-family: 'Signika', sans-serif;
+    font-size: 16px;
+}
+
+.platform_signup_para {
+    width: 340px;
+    font-family: 'Signika', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px !important;
+}
+
+.google-ads {
+    width: 42%;
+    float: left;
+    margin: 30px;
+}
+
+.login-holder {
+    width: 800px;
+}
+
+.login-form {
+    margin:0 auto;
+    width: 255px
+}
