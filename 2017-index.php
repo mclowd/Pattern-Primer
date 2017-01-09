@@ -34,7 +34,7 @@ body {
 <p>This library contains snippets of code used in the Mclowd Platform, to demonstrate how they should be written in HTML, and how that HTML is styled.<br>
 Repo is at <a href="https://github.com/mclowd/Pattern-Primer">https://github.com/mclowd/Pattern-Primer</a></p>
 <ul>
-    <li><a href="2013-index.php">2013 Original</a></li>
+    <li><a href="index.php">2013 Original</a></li>
     <li><a href="2016-index.php">2016 New Style</a></li>
 </ul>
 <?php
