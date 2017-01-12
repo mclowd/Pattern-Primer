@@ -1,0 +1,536 @@
+<div id="manual_transactions_wrapper" class="dataTables_wrapper no-footer">
+    <table id="manual_transactions" class="standard compact dataTable no-footer" role="grid" aria-describedby="manual_transactions_info">
+        <thead>
+            <tr class="dataTables_filter">
+                <th class="textleft" id="filter_dates_td" colspan="3" width="179"><label for="date_from_filter" class="visuallyhidden">From Date:</label><input type="text" id="date_from_filter" class="date_filter hasDatepicker" placeholder="From" title="From Date"><label for="date_to_filter" class="visuallyhidden">To Date:</label><input type="text" id="date_to_filter" class="date_filter hasDatepicker" placeholder="To" title="To Date"></th>
+                <th class="textleft" id="filter_text_td" colspan="1" width="292">
+                    <label for="search_filter" class="visuallyhidden">Search:</label>
+                    <div id="manual_transactions_filter" class="dataTables_filter"><input type="search" class="" placeholder="Search text and amounts" aria-controls="manual_transactions" id="search_filter" title="Search all text and amounts"></div>
+                </th>
+                <th class="textleft" id="filter_category_td">
+                    <label for="filter_category" class="visuallyhidden">Category:</label>
+                    <select class="medium category" name="category" id="category_filter" title="Category">
+                        <option value="">Please Select</option>
+                        <optgroup label="Income" data-search="Income">
+                            <option value="income" data-search="Income">-- All Income --</option>
+                            <option value="income|bas_refund">BAS Refund</option>
+                            <option value="income|contribution">Contribution</option>
+                            <option value="income|dividend">Dividend</option>
+                            <option value="income|rollin">ETP Roll Ins</option>
+                            <option value="income|income_tax_refund">Income Tax Refund</option>
+                            <option value="income|interest">Interest</option>
+                            <option value="income|payg_tax_refund">PAYG Tax Refund</option>
+                            <option value="income|receipt_from_debtor">Receipt from Debtor</option>
+                            <option value="income|receipt_of_sundry_debt">Receipt of Sundry debt</option>
+                            <option value="income|rent">Rent</option>
+                            <option value="income|trust_distribution">Trust Distribution</option>
+                            <option value="income|other">All other income</option>
+                        </optgroup>
+                        <optgroup label="Expense" data-search="Expense">
+                            <option value="expense" data-search="Expense">-- All Expense --</option>
+                            <option value="expense|ato_supervisory_levy">ATO Supervisor Fee</option>
+                            <option value="expense|auditor_fee">Auditor Fee</option>
+                            <option value="expense|bas_payment">BAS Payment</option>
+                            <option value="expense|benefits_paid">Benefits Paid</option>
+                            <option value="expense|creditor_account_payable">Creditor Account Payable</option>
+                            <option value="expense|income_tax_payment">Income Tax payment</option>
+                            <option value="expense|non_member_specific_expense">Non Member Specific Expenses</option>
+                            <option value="expense|office_expense">Office Expense</option>
+                            <option value="expense|payg_payment">PAYG payment</option>
+                            <option value="expense|payment_to_sundry_creditor">Payment to Sundry Creditor</option>
+                            <option value="expense|other">All other expenses</option>
+                        </optgroup>
+                        <optgroup label="Other" data-search="Other">
+                            <option value="other" data-search="Other">-- All Other --</option>
+                            <option value="other|asset_purchase">Asset Purchase</option>
+                            <option value="other|transfer">Bank Transfer</option>
+                            <option value="other|return_of_capital">Corporate Action - Return of Capital</option>
+                            <option value="other|sale_proceeds">Sale Proceeds</option>
+                        </optgroup>
+                    </select>
+                </th>
+                <th class="textleft" id="filter_delete_td"><input class="button secondary center auto" type="button" id="deleteBtn" value="Delete"></th>
+            </tr>
+            <tr role="row">
+                <th class="textleft sorting_desc" tabindex="0" aria-controls="manual_transactions" rowspan="1" colspan="1" aria-label="Ref.: activate to sort column ascending" aria-sort="descending">Ref.</th>
+                <th class="textleft sorting" tabindex="0" aria-controls="manual_transactions" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending">Date</th>
+                <th class="textright sorting" tabindex="0" aria-controls="manual_transactions" rowspan="1" colspan="1" aria-label="Amount: activate to sort column ascending">Amount</th>
+                <th class="textleft sorting" tabindex="0" aria-controls="manual_transactions" rowspan="1" colspan="1" aria-label="Text: activate to sort column ascending">Text</th>
+                <th class="textleft sorting" tabindex="0" aria-controls="manual_transactions" rowspan="1" colspan="1" aria-label="Category: activate to sort column ascending">Category</th>
+                <th class="textcenter sorting" tabindex="0" aria-controls="manual_transactions" rowspan="1" colspan="1" aria-label="Delete: activate to sort column ascending">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="row_1394" role="row" class="odd">
+                <td class="textleft sorting_1">1394</td>
+                <td class=" textleft">19/07/2016</td>
+                <td class=" textright"><span class="right positive">323.33</span></td>
+                <td class=" textleft">Rent recurring - Internal Transfer - Receipt 159271 Savings Maximiser 0070489837</td>
+                <td class=" textleft">
+                    <select class="medium category" name="category" id="category_1394" title="Category">
+                        <option value="">Please Select</option>
+                        <optgroup label="Income" data-search="Income">
+                            <option value="income|bas_refund" data-search="income income|bas_refund">BAS Refund</option>
+                            <option value="income|contribution" data-search="income income|contribution">Contribution</option>
+                            <option value="income|dividend" data-search="income income|dividend">Dividend</option>
+                            <option value="income|rollin" data-search="income income|rollin">ETP Roll Ins</option>
+                            <option value="income|income_tax_refund" data-search="income income|income_tax_refund">Income Tax Refund</option>
+                            <option value="income|interest" data-search="income income|interest">Interest</option>
+                            <option value="income|payg_tax_refund" data-search="income income|payg_tax_refund">PAYG Tax Refund</option>
+                            <option value="income|receipt_from_debtor" data-search="income income|receipt_from_debtor">Receipt from Debtor</option>
+                            <option value="income|receipt_of_sundry_debt" data-search="income income|receipt_of_sundry_debt">Receipt of Sundry debt</option>
+                            <option value="income|rent" data-search="income income|rent">Rent</option>
+                            <option value="income|trust_distribution" data-search="income income|trust_distribution">Trust Distribution</option>
+                            <option value="income|other" data-search="income income|other">All other income</option>
+                        </optgroup>
+                        <optgroup label="Expense" data-search="Expense">
+                            <option value="expense|ato_supervisory_levy" data-search="expense expense|ato_supervisory_levy">ATO Supervisor Fee</option>
+                            <option value="expense|auditor_fee" data-search="expense expense|auditor_fee">Auditor Fee</option>
+                            <option value="expense|bas_payment" data-search="expense expense|bas_payment">BAS Payment</option>
+                            <option value="expense|benefits_paid" data-search="expense expense|benefits_paid">Benefits Paid</option>
+                            <option value="expense|creditor_account_payable" data-search="expense expense|creditor_account_payable">Creditor Account Payable</option>
+                            <option value="expense|income_tax_payment" data-search="expense expense|income_tax_payment">Income Tax payment</option>
+                            <option value="expense|non_member_specific_expense" data-search="expense expense|non_member_specific_expense">Non Member Specific Expenses</option>
+                            <option value="expense|office_expense" data-search="expense expense|office_expense">Office Expense</option>
+                            <option value="expense|payg_payment" data-search="expense expense|payg_payment">PAYG payment</option>
+                            <option value="expense|payment_to_sundry_creditor" data-search="expense expense|payment_to_sundry_creditor">Payment to Sundry Creditor</option>
+                            <option value="expense|other" data-search="expense expense|other">All other expenses</option>
+                        </optgroup>
+                        <optgroup label="Other" data-search="Other">
+                            <option value="other|asset_purchase" data-search="other other|asset_purchase">Asset Purchase</option>
+                            <option value="other|transfer" data-search="other other|transfer">Bank Transfer</option>
+                            <option value="other|return_of_capital" data-search="other other|return_of_capital">Corporate Action - Return of Capital</option>
+                            <option value="other|sale_proceeds" data-search="other other|sale_proceeds">Sale Proceeds</option>
+                        </optgroup>
+                    </select>
+                </td>
+                <td class=" textcenter"><input type="checkbox" class="deleteSelect" value="1394" name="selectDelete[]"></td>
+            </tr>
+            <tr id="row_1393" role="row" class="even">
+                <td class="textleft sorting_1">1393</td>
+                <td class=" textleft">21/07/2016</td>
+                <td class=" textright"><span class="right positive">29.80</span></td>
+                <td class=" textleft">sushi - Internal Transfer - Receipt 676691 Savings Maximiser 0070489837</td>
+                <td class=" textleft">
+                    <select class="medium category" name="category" id="category_1393" title="Category">
+                        <option value="">Please Select</option>
+                        <optgroup label="Income" data-search="Income">
+                            <option value="income|bas_refund" data-search="income income|bas_refund">BAS Refund</option>
+                            <option value="income|contribution" data-search="income income|contribution">Contribution</option>
+                            <option value="income|dividend" data-search="income income|dividend">Dividend</option>
+                            <option value="income|rollin" data-search="income income|rollin">ETP Roll Ins</option>
+                            <option value="income|income_tax_refund" data-search="income income|income_tax_refund">Income Tax Refund</option>
+                            <option value="income|interest" data-search="income income|interest">Interest</option>
+                            <option value="income|payg_tax_refund" data-search="income income|payg_tax_refund">PAYG Tax Refund</option>
+                            <option value="income|receipt_from_debtor" data-search="income income|receipt_from_debtor">Receipt from Debtor</option>
+                            <option value="income|receipt_of_sundry_debt" data-search="income income|receipt_of_sundry_debt">Receipt of Sundry debt</option>
+                            <option value="income|rent" data-search="income income|rent">Rent</option>
+                            <option value="income|trust_distribution" data-search="income income|trust_distribution">Trust Distribution</option>
+                            <option value="income|other" data-search="income income|other">All other income</option>
+                        </optgroup>
+                        <optgroup label="Expense" data-search="Expense">
+                            <option value="expense|ato_supervisory_levy" data-search="expense expense|ato_supervisory_levy">ATO Supervisor Fee</option>
+                            <option value="expense|auditor_fee" data-search="expense expense|auditor_fee">Auditor Fee</option>
+                            <option value="expense|bas_payment" data-search="expense expense|bas_payment">BAS Payment</option>
+                            <option value="expense|benefits_paid" data-search="expense expense|benefits_paid">Benefits Paid</option>
+                            <option value="expense|creditor_account_payable" data-search="expense expense|creditor_account_payable">Creditor Account Payable</option>
+                            <option value="expense|income_tax_payment" data-search="expense expense|income_tax_payment">Income Tax payment</option>
+                            <option value="expense|non_member_specific_expense" data-search="expense expense|non_member_specific_expense">Non Member Specific Expenses</option>
+                            <option value="expense|office_expense" data-search="expense expense|office_expense">Office Expense</option>
+                            <option value="expense|payg_payment" data-search="expense expense|payg_payment">PAYG payment</option>
+                            <option value="expense|payment_to_sundry_creditor" data-search="expense expense|payment_to_sundry_creditor">Payment to Sundry Creditor</option>
+                            <option value="expense|other" data-search="expense expense|other">All other expenses</option>
+                        </optgroup>
+                        <optgroup label="Other" data-search="Other">
+                            <option value="other|asset_purchase" data-search="other other|asset_purchase">Asset Purchase</option>
+                            <option value="other|transfer" data-search="other other|transfer">Bank Transfer</option>
+                            <option value="other|return_of_capital" data-search="other other|return_of_capital">Corporate Action - Return of Capital</option>
+                            <option value="other|sale_proceeds" data-search="other other|sale_proceeds">Sale Proceeds</option>
+                        </optgroup>
+                    </select>
+                </td>
+                <td class=" textcenter"><input type="checkbox" class="deleteSelect" value="1393" name="selectDelete[]"></td>
+            </tr>
+            <tr id="row_1392" role="row" class="odd">
+                <td class="textleft sorting_1">1392</td>
+                <td class=" textleft">21/07/2016</td>
+                <td class=" textright"><span class="right negative">-323.33</span></td>
+                <td class=" textleft">Rent 21Jul2016 - Transfer to Ilya Popov - Receipt 679073 To 062172 10330638</td>
+                <td class=" textleft">
+                    <select class="medium category" name="category" id="category_1392" title="Category">
+                        <option value="">Please Select</option>
+                        <optgroup label="Income" data-search="Income">
+                            <option value="income|bas_refund" data-search="income income|bas_refund">BAS Refund</option>
+                            <option value="income|contribution" data-search="income income|contribution">Contribution</option>
+                            <option value="income|dividend" data-search="income income|dividend">Dividend</option>
+                            <option value="income|rollin" data-search="income income|rollin">ETP Roll Ins</option>
+                            <option value="income|income_tax_refund" data-search="income income|income_tax_refund">Income Tax Refund</option>
+                            <option value="income|interest" data-search="income income|interest">Interest</option>
+                            <option value="income|payg_tax_refund" data-search="income income|payg_tax_refund">PAYG Tax Refund</option>
+                            <option value="income|receipt_from_debtor" data-search="income income|receipt_from_debtor">Receipt from Debtor</option>
+                            <option value="income|receipt_of_sundry_debt" data-search="income income|receipt_of_sundry_debt">Receipt of Sundry debt</option>
+                            <option value="income|rent" data-search="income income|rent">Rent</option>
+                            <option value="income|trust_distribution" data-search="income income|trust_distribution">Trust Distribution</option>
+                            <option value="income|other" data-search="income income|other">All other income</option>
+                        </optgroup>
+                        <optgroup label="Expense" data-search="Expense">
+                            <option value="expense|ato_supervisory_levy" data-search="expense expense|ato_supervisory_levy">ATO Supervisor Fee</option>
+                            <option value="expense|auditor_fee" data-search="expense expense|auditor_fee">Auditor Fee</option>
+                            <option value="expense|bas_payment" data-search="expense expense|bas_payment">BAS Payment</option>
+                            <option value="expense|benefits_paid" data-search="expense expense|benefits_paid">Benefits Paid</option>
+                            <option value="expense|creditor_account_payable" data-search="expense expense|creditor_account_payable">Creditor Account Payable</option>
+                            <option value="expense|income_tax_payment" data-search="expense expense|income_tax_payment">Income Tax payment</option>
+                            <option value="expense|non_member_specific_expense" data-search="expense expense|non_member_specific_expense">Non Member Specific Expenses</option>
+                            <option value="expense|office_expense" data-search="expense expense|office_expense">Office Expense</option>
+                            <option value="expense|payg_payment" data-search="expense expense|payg_payment">PAYG payment</option>
+                            <option value="expense|payment_to_sundry_creditor" data-search="expense expense|payment_to_sundry_creditor">Payment to Sundry Creditor</option>
+                            <option value="expense|other" data-search="expense expense|other">All other expenses</option>
+                        </optgroup>
+                        <optgroup label="Other" data-search="Other">
+                            <option value="other|asset_purchase" data-search="other other|asset_purchase">Asset Purchase</option>
+                            <option value="other|transfer" data-search="other other|transfer">Bank Transfer</option>
+                            <option value="other|return_of_capital" data-search="other other|return_of_capital">Corporate Action - Return of Capital</option>
+                            <option value="other|sale_proceeds" data-search="other other|sale_proceeds">Sale Proceeds</option>
+                        </optgroup>
+                    </select>
+                </td>
+                <td class=" textcenter"><input type="checkbox" class="deleteSelect" value="1392" name="selectDelete[]"></td>
+            </tr>
+            <tr id="row_1391" role="row" class="even">
+                <td class="textleft sorting_1">1391</td>
+                <td class=" textleft">21/07/2016</td>
+                <td class=" textright"><span class="right positive">5469.82</span></td>
+                <td class=" textleft">Jade Edward      Mclowd July 2016  - Receipt 100449</td>
+                <td class=" textleft">
+                    <select class="medium category" name="category" id="category_1391" title="Category">
+                        <option value="">Please Select</option>
+                        <optgroup label="Income" data-search="Income">
+                            <option value="income|bas_refund" data-search="income income|bas_refund">BAS Refund</option>
+                            <option value="income|contribution" data-search="income income|contribution">Contribution</option>
+                            <option value="income|dividend" data-search="income income|dividend">Dividend</option>
+                            <option value="income|rollin" data-search="income income|rollin">ETP Roll Ins</option>
+                            <option value="income|income_tax_refund" data-search="income income|income_tax_refund">Income Tax Refund</option>
+                            <option value="income|interest" data-search="income income|interest">Interest</option>
+                            <option value="income|payg_tax_refund" data-search="income income|payg_tax_refund">PAYG Tax Refund</option>
+                            <option value="income|receipt_from_debtor" data-search="income income|receipt_from_debtor">Receipt from Debtor</option>
+                            <option value="income|receipt_of_sundry_debt" data-search="income income|receipt_of_sundry_debt">Receipt of Sundry debt</option>
+                            <option value="income|rent" data-search="income income|rent">Rent</option>
+                            <option value="income|trust_distribution" data-search="income income|trust_distribution">Trust Distribution</option>
+                            <option value="income|other" data-search="income income|other">All other income</option>
+                        </optgroup>
+                        <optgroup label="Expense" data-search="Expense">
+                            <option value="expense|ato_supervisory_levy" data-search="expense expense|ato_supervisory_levy">ATO Supervisor Fee</option>
+                            <option value="expense|auditor_fee" data-search="expense expense|auditor_fee">Auditor Fee</option>
+                            <option value="expense|bas_payment" data-search="expense expense|bas_payment">BAS Payment</option>
+                            <option value="expense|benefits_paid" data-search="expense expense|benefits_paid">Benefits Paid</option>
+                            <option value="expense|creditor_account_payable" data-search="expense expense|creditor_account_payable">Creditor Account Payable</option>
+                            <option value="expense|income_tax_payment" data-search="expense expense|income_tax_payment">Income Tax payment</option>
+                            <option value="expense|non_member_specific_expense" data-search="expense expense|non_member_specific_expense">Non Member Specific Expenses</option>
+                            <option value="expense|office_expense" data-search="expense expense|office_expense">Office Expense</option>
+                            <option value="expense|payg_payment" data-search="expense expense|payg_payment">PAYG payment</option>
+                            <option value="expense|payment_to_sundry_creditor" data-search="expense expense|payment_to_sundry_creditor">Payment to Sundry Creditor</option>
+                            <option value="expense|other" data-search="expense expense|other">All other expenses</option>
+                        </optgroup>
+                        <optgroup label="Other" data-search="Other">
+                            <option value="other|asset_purchase" data-search="other other|asset_purchase">Asset Purchase</option>
+                            <option value="other|transfer" data-search="other other|transfer">Bank Transfer</option>
+                            <option value="other|return_of_capital" data-search="other other|return_of_capital">Corporate Action - Return of Capital</option>
+                            <option value="other|sale_proceeds" data-search="other other|sale_proceeds">Sale Proceeds</option>
+                        </optgroup>
+                    </select>
+                </td>
+                <td class=" textcenter"><input type="checkbox" class="deleteSelect" value="1391" name="selectDelete[]"></td>
+            </tr>
+            <tr id="row_1390" role="row" class="odd">
+                <td class="textleft sorting_1">1390</td>
+                <td class=" textleft">23/07/2016</td>
+                <td class=" textright"><span class="right negative">-29.80</span></td>
+                <td class=" textleft">EAST SUSHI PTY LTD    LEI - Visa Purchase - Receipt 124471In CHHARDT   NS Date 20 Jul 2016 Card 462263xxxxxx5194</td>
+                <td class=" textleft">
+                    <select class="medium category" name="category" id="category_1390" title="Category">
+                        <option value="">Please Select</option>
+                        <optgroup label="Income" data-search="Income">
+                            <option value="income|bas_refund" data-search="income income|bas_refund">BAS Refund</option>
+                            <option value="income|contribution" data-search="income income|contribution">Contribution</option>
+                            <option value="income|dividend" data-search="income income|dividend">Dividend</option>
+                            <option value="income|rollin" data-search="income income|rollin">ETP Roll Ins</option>
+                            <option value="income|income_tax_refund" data-search="income income|income_tax_refund">Income Tax Refund</option>
+                            <option value="income|interest" data-search="income income|interest">Interest</option>
+                            <option value="income|payg_tax_refund" data-search="income income|payg_tax_refund">PAYG Tax Refund</option>
+                            <option value="income|receipt_from_debtor" data-search="income income|receipt_from_debtor">Receipt from Debtor</option>
+                            <option value="income|receipt_of_sundry_debt" data-search="income income|receipt_of_sundry_debt">Receipt of Sundry debt</option>
+                            <option value="income|rent" data-search="income income|rent">Rent</option>
+                            <option value="income|trust_distribution" data-search="income income|trust_distribution">Trust Distribution</option>
+                            <option value="income|other" data-search="income income|other">All other income</option>
+                        </optgroup>
+                        <optgroup label="Expense" data-search="Expense">
+                            <option value="expense|ato_supervisory_levy" data-search="expense expense|ato_supervisory_levy">ATO Supervisor Fee</option>
+                            <option value="expense|auditor_fee" data-search="expense expense|auditor_fee">Auditor Fee</option>
+                            <option value="expense|bas_payment" data-search="expense expense|bas_payment">BAS Payment</option>
+                            <option value="expense|benefits_paid" data-search="expense expense|benefits_paid">Benefits Paid</option>
+                            <option value="expense|creditor_account_payable" data-search="expense expense|creditor_account_payable">Creditor Account Payable</option>
+                            <option value="expense|income_tax_payment" data-search="expense expense|income_tax_payment">Income Tax payment</option>
+                            <option value="expense|non_member_specific_expense" data-search="expense expense|non_member_specific_expense">Non Member Specific Expenses</option>
+                            <option value="expense|office_expense" data-search="expense expense|office_expense">Office Expense</option>
+                            <option value="expense|payg_payment" data-search="expense expense|payg_payment">PAYG payment</option>
+                            <option value="expense|payment_to_sundry_creditor" data-search="expense expense|payment_to_sundry_creditor">Payment to Sundry Creditor</option>
+                            <option value="expense|other" data-search="expense expense|other">All other expenses</option>
+                        </optgroup>
+                        <optgroup label="Other" data-search="Other">
+                            <option value="other|asset_purchase" data-search="other other|asset_purchase">Asset Purchase</option>
+                            <option value="other|transfer" data-search="other other|transfer">Bank Transfer</option>
+                            <option value="other|return_of_capital" data-search="other other|return_of_capital">Corporate Action - Return of Capital</option>
+                            <option value="other|sale_proceeds" data-search="other other|sale_proceeds">Sale Proceeds</option>
+                        </optgroup>
+                    </select>
+                </td>
+                <td class=" textcenter"><input type="checkbox" class="deleteSelect" value="1390" name="selectDelete[]"></td>
+            </tr>
+            <tr id="row_1389" role="row" class="even">
+                <td class="textleft sorting_1">1389</td>
+                <td class=" textleft">24/07/2016</td>
+                <td class=" textright"><span class="right negative">-7.50</span></td>
+                <td class=" textleft">VICTORIA   HOBBS      LEW - Visa Purchase - Receipt 117489In ISHAM     NS Date 21 Jul 2016 Card 462263xxxxxx5194</td>
+                <td class=" textleft">
+                    <select class="medium category" name="category" id="category_1389" title="Category">
+                        <option value="">Please Select</option>
+                        <optgroup label="Income" data-search="Income">
+                            <option value="income|bas_refund" data-search="income income|bas_refund">BAS Refund</option>
+                            <option value="income|contribution" data-search="income income|contribution">Contribution</option>
+                            <option value="income|dividend" data-search="income income|dividend">Dividend</option>
+                            <option value="income|rollin" data-search="income income|rollin">ETP Roll Ins</option>
+                            <option value="income|income_tax_refund" data-search="income income|income_tax_refund">Income Tax Refund</option>
+                            <option value="income|interest" data-search="income income|interest">Interest</option>
+                            <option value="income|payg_tax_refund" data-search="income income|payg_tax_refund">PAYG Tax Refund</option>
+                            <option value="income|receipt_from_debtor" data-search="income income|receipt_from_debtor">Receipt from Debtor</option>
+                            <option value="income|receipt_of_sundry_debt" data-search="income income|receipt_of_sundry_debt">Receipt of Sundry debt</option>
+                            <option value="income|rent" data-search="income income|rent">Rent</option>
+                            <option value="income|trust_distribution" data-search="income income|trust_distribution">Trust Distribution</option>
+                            <option value="income|other" data-search="income income|other">All other income</option>
+                        </optgroup>
+                        <optgroup label="Expense" data-search="Expense">
+                            <option value="expense|ato_supervisory_levy" data-search="expense expense|ato_supervisory_levy">ATO Supervisor Fee</option>
+                            <option value="expense|auditor_fee" data-search="expense expense|auditor_fee">Auditor Fee</option>
+                            <option value="expense|bas_payment" data-search="expense expense|bas_payment">BAS Payment</option>
+                            <option value="expense|benefits_paid" data-search="expense expense|benefits_paid">Benefits Paid</option>
+                            <option value="expense|creditor_account_payable" data-search="expense expense|creditor_account_payable">Creditor Account Payable</option>
+                            <option value="expense|income_tax_payment" data-search="expense expense|income_tax_payment">Income Tax payment</option>
+                            <option value="expense|non_member_specific_expense" data-search="expense expense|non_member_specific_expense">Non Member Specific Expenses</option>
+                            <option value="expense|office_expense" data-search="expense expense|office_expense">Office Expense</option>
+                            <option value="expense|payg_payment" data-search="expense expense|payg_payment">PAYG payment</option>
+                            <option value="expense|payment_to_sundry_creditor" data-search="expense expense|payment_to_sundry_creditor">Payment to Sundry Creditor</option>
+                            <option value="expense|other" data-search="expense expense|other">All other expenses</option>
+                        </optgroup>
+                        <optgroup label="Other" data-search="Other">
+                            <option value="other|asset_purchase" data-search="other other|asset_purchase">Asset Purchase</option>
+                            <option value="other|transfer" data-search="other other|transfer">Bank Transfer</option>
+                            <option value="other|return_of_capital" data-search="other other|return_of_capital">Corporate Action - Return of Capital</option>
+                            <option value="other|sale_proceeds" data-search="other other|sale_proceeds">Sale Proceeds</option>
+                        </optgroup>
+                    </select>
+                </td>
+                <td class=" textcenter"><input type="checkbox" class="deleteSelect" value="1389" name="selectDelete[]"></td>
+            </tr>
+            <tr id="row_1388" role="row" class="odd">
+                <td class="textleft sorting_1">1388</td>
+                <td class=" textleft">26/07/2016</td>
+                <td class=" textright"><span class="right negative">-600.00</span></td>
+                <td class=" textleft">madza may jul aug - Transfer to Michael Brown and Rachel Clinton - Receipt 186402 To 732285 693333</td>
+                <td class=" textleft">
+                    <select class="medium category" name="category" id="category_1388" title="Category">
+                        <option value="">Please Select</option>
+                        <optgroup label="Income" data-search="Income">
+                            <option value="income|bas_refund" data-search="income income|bas_refund">BAS Refund</option>
+                            <option value="income|contribution" data-search="income income|contribution">Contribution</option>
+                            <option value="income|dividend" data-search="income income|dividend">Dividend</option>
+                            <option value="income|rollin" data-search="income income|rollin">ETP Roll Ins</option>
+                            <option value="income|income_tax_refund" data-search="income income|income_tax_refund">Income Tax Refund</option>
+                            <option value="income|interest" data-search="income income|interest">Interest</option>
+                            <option value="income|payg_tax_refund" data-search="income income|payg_tax_refund">PAYG Tax Refund</option>
+                            <option value="income|receipt_from_debtor" data-search="income income|receipt_from_debtor">Receipt from Debtor</option>
+                            <option value="income|receipt_of_sundry_debt" data-search="income income|receipt_of_sundry_debt">Receipt of Sundry debt</option>
+                            <option value="income|rent" data-search="income income|rent">Rent</option>
+                            <option value="income|trust_distribution" data-search="income income|trust_distribution">Trust Distribution</option>
+                            <option value="income|other" data-search="income income|other">All other income</option>
+                        </optgroup>
+                        <optgroup label="Expense" data-search="Expense">
+                            <option value="expense|ato_supervisory_levy" data-search="expense expense|ato_supervisory_levy">ATO Supervisor Fee</option>
+                            <option value="expense|auditor_fee" data-search="expense expense|auditor_fee">Auditor Fee</option>
+                            <option value="expense|bas_payment" data-search="expense expense|bas_payment">BAS Payment</option>
+                            <option value="expense|benefits_paid" data-search="expense expense|benefits_paid">Benefits Paid</option>
+                            <option value="expense|creditor_account_payable" data-search="expense expense|creditor_account_payable">Creditor Account Payable</option>
+                            <option value="expense|income_tax_payment" data-search="expense expense|income_tax_payment">Income Tax payment</option>
+                            <option value="expense|non_member_specific_expense" data-search="expense expense|non_member_specific_expense">Non Member Specific Expenses</option>
+                            <option value="expense|office_expense" data-search="expense expense|office_expense">Office Expense</option>
+                            <option value="expense|payg_payment" data-search="expense expense|payg_payment">PAYG payment</option>
+                            <option value="expense|payment_to_sundry_creditor" data-search="expense expense|payment_to_sundry_creditor">Payment to Sundry Creditor</option>
+                            <option value="expense|other" data-search="expense expense|other">All other expenses</option>
+                        </optgroup>
+                        <optgroup label="Other" data-search="Other">
+                            <option value="other|asset_purchase" data-search="other other|asset_purchase">Asset Purchase</option>
+                            <option value="other|transfer" data-search="other other|transfer">Bank Transfer</option>
+                            <option value="other|return_of_capital" data-search="other other|return_of_capital">Corporate Action - Return of Capital</option>
+                            <option value="other|sale_proceeds" data-search="other other|sale_proceeds">Sale Proceeds</option>
+                        </optgroup>
+                    </select>
+                </td>
+                <td class=" textcenter"><input type="checkbox" class="deleteSelect" value="1388" name="selectDelete[]"></td>
+            </tr>
+            <tr id="row_1387" role="row" class="even">
+                <td class="textleft sorting_1">1387</td>
+                <td class=" textleft">28/07/2016</td>
+                <td class=" textright"><span class="right negative">-540.00</span></td>
+                <td class=" textleft">SUPERPARTNERS - Direct Debit - Receipt 121042 AUSSUPER 711561319</td>
+                <td class=" textleft">
+                    <select class="medium category" name="category" id="category_1387" title="Category">
+                        <option value="">Please Select</option>
+                        <optgroup label="Income" data-search="Income">
+                            <option value="income|bas_refund" data-search="income income|bas_refund">BAS Refund</option>
+                            <option value="income|contribution" data-search="income income|contribution">Contribution</option>
+                            <option value="income|dividend" data-search="income income|dividend">Dividend</option>
+                            <option value="income|rollin" data-search="income income|rollin">ETP Roll Ins</option>
+                            <option value="income|income_tax_refund" data-search="income income|income_tax_refund">Income Tax Refund</option>
+                            <option value="income|interest" data-search="income income|interest">Interest</option>
+                            <option value="income|payg_tax_refund" data-search="income income|payg_tax_refund">PAYG Tax Refund</option>
+                            <option value="income|receipt_from_debtor" data-search="income income|receipt_from_debtor">Receipt from Debtor</option>
+                            <option value="income|receipt_of_sundry_debt" data-search="income income|receipt_of_sundry_debt">Receipt of Sundry debt</option>
+                            <option value="income|rent" data-search="income income|rent">Rent</option>
+                            <option value="income|trust_distribution" data-search="income income|trust_distribution">Trust Distribution</option>
+                            <option value="income|other" data-search="income income|other">All other income</option>
+                        </optgroup>
+                        <optgroup label="Expense" data-search="Expense">
+                            <option value="expense|ato_supervisory_levy" data-search="expense expense|ato_supervisory_levy">ATO Supervisor Fee</option>
+                            <option value="expense|auditor_fee" data-search="expense expense|auditor_fee">Auditor Fee</option>
+                            <option value="expense|bas_payment" data-search="expense expense|bas_payment">BAS Payment</option>
+                            <option value="expense|benefits_paid" data-search="expense expense|benefits_paid">Benefits Paid</option>
+                            <option value="expense|creditor_account_payable" data-search="expense expense|creditor_account_payable">Creditor Account Payable</option>
+                            <option value="expense|income_tax_payment" data-search="expense expense|income_tax_payment">Income Tax payment</option>
+                            <option value="expense|non_member_specific_expense" data-search="expense expense|non_member_specific_expense">Non Member Specific Expenses</option>
+                            <option value="expense|office_expense" data-search="expense expense|office_expense">Office Expense</option>
+                            <option value="expense|payg_payment" data-search="expense expense|payg_payment">PAYG payment</option>
+                            <option value="expense|payment_to_sundry_creditor" data-search="expense expense|payment_to_sundry_creditor">Payment to Sundry Creditor</option>
+                            <option value="expense|other" data-search="expense expense|other">All other expenses</option>
+                        </optgroup>
+                        <optgroup label="Other" data-search="Other">
+                            <option value="other|asset_purchase" data-search="other other|asset_purchase">Asset Purchase</option>
+                            <option value="other|transfer" data-search="other other|transfer">Bank Transfer</option>
+                            <option value="other|return_of_capital" data-search="other other|return_of_capital">Corporate Action - Return of Capital</option>
+                            <option value="other|sale_proceeds" data-search="other other|sale_proceeds">Sale Proceeds</option>
+                        </optgroup>
+                    </select>
+                </td>
+                <td class=" textcenter"><input type="checkbox" class="deleteSelect" value="1387" name="selectDelete[]"></td>
+            </tr>
+            <tr id="row_1386" role="row" class="odd">
+                <td class="textleft sorting_1">1386</td>
+                <td class=" textleft">29/07/2016</td>
+                <td class=" textright"><span class="right positive">139.95</span></td>
+                <td class=" textleft">AHM Health Insurance - Internal Transfer - Receipt 517323 Savings Maximiser 0070489837</td>
+                <td class=" textleft">
+                    <select class="medium category" name="category" id="category_1386" title="Category">
+                        <option value="">Please Select</option>
+                        <optgroup label="Income" data-search="Income">
+                            <option value="income|bas_refund" data-search="income income|bas_refund">BAS Refund</option>
+                            <option value="income|contribution" data-search="income income|contribution">Contribution</option>
+                            <option value="income|dividend" data-search="income income|dividend">Dividend</option>
+                            <option value="income|rollin" data-search="income income|rollin">ETP Roll Ins</option>
+                            <option value="income|income_tax_refund" data-search="income income|income_tax_refund">Income Tax Refund</option>
+                            <option value="income|interest" data-search="income income|interest">Interest</option>
+                            <option value="income|payg_tax_refund" data-search="income income|payg_tax_refund">PAYG Tax Refund</option>
+                            <option value="income|receipt_from_debtor" data-search="income income|receipt_from_debtor">Receipt from Debtor</option>
+                            <option value="income|receipt_of_sundry_debt" data-search="income income|receipt_of_sundry_debt">Receipt of Sundry debt</option>
+                            <option value="income|rent" data-search="income income|rent">Rent</option>
+                            <option value="income|trust_distribution" data-search="income income|trust_distribution">Trust Distribution</option>
+                            <option value="income|other" data-search="income income|other">All other income</option>
+                        </optgroup>
+                        <optgroup label="Expense" data-search="Expense">
+                            <option value="expense|ato_supervisory_levy" data-search="expense expense|ato_supervisory_levy">ATO Supervisor Fee</option>
+                            <option value="expense|auditor_fee" data-search="expense expense|auditor_fee">Auditor Fee</option>
+                            <option value="expense|bas_payment" data-search="expense expense|bas_payment">BAS Payment</option>
+                            <option value="expense|benefits_paid" data-search="expense expense|benefits_paid">Benefits Paid</option>
+                            <option value="expense|creditor_account_payable" data-search="expense expense|creditor_account_payable">Creditor Account Payable</option>
+                            <option value="expense|income_tax_payment" data-search="expense expense|income_tax_payment">Income Tax payment</option>
+                            <option value="expense|non_member_specific_expense" data-search="expense expense|non_member_specific_expense">Non Member Specific Expenses</option>
+                            <option value="expense|office_expense" data-search="expense expense|office_expense">Office Expense</option>
+                            <option value="expense|payg_payment" data-search="expense expense|payg_payment">PAYG payment</option>
+                            <option value="expense|payment_to_sundry_creditor" data-search="expense expense|payment_to_sundry_creditor">Payment to Sundry Creditor</option>
+                            <option value="expense|other" data-search="expense expense|other">All other expenses</option>
+                        </optgroup>
+                        <optgroup label="Other" data-search="Other">
+                            <option value="other|asset_purchase" data-search="other other|asset_purchase">Asset Purchase</option>
+                            <option value="other|transfer" data-search="other other|transfer">Bank Transfer</option>
+                            <option value="other|return_of_capital" data-search="other other|return_of_capital">Corporate Action - Return of Capital</option>
+                            <option value="other|sale_proceeds" data-search="other other|sale_proceeds">Sale Proceeds</option>
+                        </optgroup>
+                    </select>
+                </td>
+                <td class=" textcenter"><input type="checkbox" class="deleteSelect" value="1386" name="selectDelete[]"></td>
+            </tr>
+            <tr id="row_1385" role="row" class="even">
+                <td class="textleft sorting_1">1385</td>
+                <td class=" textleft">01/08/2016</td>
+                <td class=" textright"><span class="right negative">-36.00</span></td>
+                <td class=" textleft">Vapiano King St - Visa Purchase - Receipt 145176In Sydney Date 30 Jul 2016 Card 462263xxxxxx5194</td>
+                <td class=" textleft">
+                    <select class="medium category" name="category" id="category_1385" title="Category">
+                        <option value="">Please Select</option>
+                        <optgroup label="Income" data-search="Income">
+                            <option value="income|bas_refund" data-search="income income|bas_refund">BAS Refund</option>
+                            <option value="income|contribution" data-search="income income|contribution">Contribution</option>
+                            <option value="income|dividend" data-search="income income|dividend">Dividend</option>
+                            <option value="income|rollin" data-search="income income|rollin">ETP Roll Ins</option>
+                            <option value="income|income_tax_refund" data-search="income income|income_tax_refund">Income Tax Refund</option>
+                            <option value="income|interest" data-search="income income|interest">Interest</option>
+                            <option value="income|payg_tax_refund" data-search="income income|payg_tax_refund">PAYG Tax Refund</option>
+                            <option value="income|receipt_from_debtor" data-search="income income|receipt_from_debtor">Receipt from Debtor</option>
+                            <option value="income|receipt_of_sundry_debt" data-search="income income|receipt_of_sundry_debt">Receipt of Sundry debt</option>
+                            <option value="income|rent" data-search="income income|rent">Rent</option>
+                            <option value="income|trust_distribution" data-search="income income|trust_distribution">Trust Distribution</option>
+                            <option value="income|other" data-search="income income|other">All other income</option>
+                        </optgroup>
+                        <optgroup label="Expense" data-search="Expense">
+                            <option value="expense|ato_supervisory_levy" data-search="expense expense|ato_supervisory_levy">ATO Supervisor Fee</option>
+                            <option value="expense|auditor_fee" data-search="expense expense|auditor_fee">Auditor Fee</option>
+                            <option value="expense|bas_payment" data-search="expense expense|bas_payment">BAS Payment</option>
+                            <option value="expense|benefits_paid" data-search="expense expense|benefits_paid">Benefits Paid</option>
+                            <option value="expense|creditor_account_payable" data-search="expense expense|creditor_account_payable">Creditor Account Payable</option>
+                            <option value="expense|income_tax_payment" data-search="expense expense|income_tax_payment">Income Tax payment</option>
+                            <option value="expense|non_member_specific_expense" data-search="expense expense|non_member_specific_expense">Non Member Specific Expenses</option>
+                            <option value="expense|office_expense" data-search="expense expense|office_expense">Office Expense</option>
+                            <option value="expense|payg_payment" data-search="expense expense|payg_payment">PAYG payment</option>
+                            <option value="expense|payment_to_sundry_creditor" data-search="expense expense|payment_to_sundry_creditor">Payment to Sundry Creditor</option>
+                            <option value="expense|other" data-search="expense expense|other">All other expenses</option>
+                        </optgroup>
+                        <optgroup label="Other" data-search="Other">
+                            <option value="other|asset_purchase" data-search="other other|asset_purchase">Asset Purchase</option>
+                            <option value="other|transfer" data-search="other other|transfer">Bank Transfer</option>
+                            <option value="other|return_of_capital" data-search="other other|return_of_capital">Corporate Action - Return of Capital</option>
+                            <option value="other|sale_proceeds" data-search="other other|sale_proceeds">Sale Proceeds</option>
+                        </optgroup>
+                    </select>
+                </td>
+                <td class=" textcenter"><input type="checkbox" class="deleteSelect" value="1385" name="selectDelete[]"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="dt-length" class="left">
+        <div class="dataTables_length" id="manual_transactions_length">
+            <label>
+                Show
+                <select name="manual_transactions_length" aria-controls="manual_transactions" class="">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+                entries
+            </label>
+        </div>
+    </div>
+    <div id="dt-info" class="left">
+        <div class="dataTables_info" id="manual_transactions_info" role="status" aria-live="polite">Showing 1 to 10 of 65 entries</div>
+    </div>
+    <div id="dt-paging" class="right">
+        <div class="dataTables_paginate paging_simple_numbers" id="manual_transactions_paginate"><a class="paginate_button previous disabled" aria-controls="manual_transactions" data-dt-idx="0" tabindex="0" id="manual_transactions_previous">Previous</a><span><a class="paginate_button current" aria-controls="manual_transactions" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="manual_transactions" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="manual_transactions" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="manual_transactions" data-dt-idx="4" tabindex="0">4</a><a class="paginate_button " aria-controls="manual_transactions" data-dt-idx="5" tabindex="0">5</a><a class="paginate_button " aria-controls="manual_transactions" data-dt-idx="6" tabindex="0">6</a><a class="paginate_button " aria-controls="manual_transactions" data-dt-idx="7" tabindex="0">7</a></span><a class="paginate_button next" aria-controls="manual_transactions" data-dt-idx="8" tabindex="0" id="manual_transactions_next">Next</a></div>
+    </div>
+</div>

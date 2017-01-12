@@ -1,0 +1,38 @@
+<a href="jquery-ui-1.11.4.custom/index.html">jQuery UI Elements</a>
+
+<p><button id="dialog-link" class="button primary">Open Dialog</button></p>
+<div title="Dialog Title" id="dialog">
+    <p>Text inside dialog.</p>
+    <p>More dialog text</p>
+    <ul>
+        <li>List item one.</li>
+        <li>List item 2</li>
+    </ul>
+</div>
+
+<script>
+$( "#dialog" ).dialog({
+    autoOpen: false,
+    width: 400,
+    modal: true,
+    buttons: [
+        {
+            text: "Ok",
+            click: function() {
+                $( this ).dialog( "close" );
+            }
+        },
+        {
+            text: "Cancel",
+            click: function() {
+                $( this ).dialog( "close" );
+            }
+        }
+    ]
+});
+// Link to open the dialog
+$( "#dialog-link" ).click(function( event ) {
+    $( "#dialog" ).dialog( "open" );
+    event.preventDefault();
+});
+</script>

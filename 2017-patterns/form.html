@@ -1,0 +1,171 @@
+(TODO: Work out how to do columns)
+
+<form id="asset" name="asset" action="" method="post">
+    <fieldset class="standard">
+        <legend><div><span>Account</span> <a class="help" href="#"><i class="fa fa-question-circle"></i></a></div></legend>
+        <div class="input-box" checkfield="#selectedMemberAccountID" checkrule="number">
+            <label for="selectedMemberAccountID" class="mandatory">
+                <span>Member Account</span>
+                <span>(required)</span>
+            </label>
+            <select id="selectedMemberAccountID" name="selectedMemberAccountID">
+                <option value="">Please Select</option>
+                <option value="0" selected="selected">Fund</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset class="standard">
+            <legend><div><span>Asset Details</span><a class="help" href="#"><i class="fa fa-question-circle"></i></a></div></legend>
+            <div class="col">
+                <div class="input-box" checkfield="#asset_class" checkrule="number">
+                    <label for="asset_class" class="mandatory">
+                        <span>Asset Class</span>
+                        <span>(required)</span>
+                    </label>
+                    <select id="asset_class" name="asset_class">
+                        <option value="">Please Select</option>
+                        <option value="1" data-text="direct_equities">Direct Equities</option>
+                        <option value="2" data-text="hybrids">Hybrids</option>
+                        <option value="3" data-text="bonds">Bonds</option>
+                        <option value="4" data-text="fixed_interest">Fixed Interest</option>
+                        <option value="5" data-text="unit_trusts">Unit Trusts</option>
+                        <option value="7" data-text="managed_funds">Managed Funds</option>
+                        <option value="8" data-text="direct_property">Direct Property</option>
+                        <option value="9" data-text="alternative_assets">Alternative Assets</option>
+                        <option value="10" data-text="derivatives">Derivatives</option>
+                    </select>
+                    <span class="form_error" title=""><i class="fa fa-exclamation-triangle"></i></span>
+                </div>
+                <div class="input-box">
+                    <label for="asset_category" class="mandatory">
+                        <span>Asset Category</span>
+                        <span>(required)</span>
+                    </label>
+                    <select id="asset_category" name="asset_category">
+                        <option value="Domestic" data-text="Domestic">Domestic</option>
+                        <option value="Foreign" data-text="Foreign">Foreign</option>
+                    </select>
+                    <span class="form_error" title=""><i class="fa fa-exclamation-triangle"></i></span>
+                </div>
+            </div>
+        </fieldset>
+        <div id="formPreContent" style="display: block;">
+            <fieldset class="standard" id="holding">
+                <legend><div><span>Holding</span> <a class="help" href="#"><i class="fa fa-question-circle"></i></a></div></legend>
+                <div class="col">
+                    <div class="input-box invalid" checkfield="#asset_holding" checkrule="holding">
+                        <label for="asset_holding" class="mandatory">
+                            <span>Holding</span>
+                            <span>(required)</span>
+                        </label>
+                        <select id="asset_holding" name="asset_holding" title="" autocomplete="off">
+                            <option value="x">Please Select</option>
+                            <optgroup label="Create a New Holding">
+                                <option value="holding_parcel">
+                                    New holding and new parcel
+                                </option>
+                                <option value="holding_only">New holding only</option>
+                            </optgroup>
+                        </select>
+                        <a class="help show" href="#"><i class="fa fa-question-circle"></i></a>
+                        <span class="form_error"><i class="fa fa-exclamation-triangle"></i></span>
+                    </div>
+                    <div class="input-box invalid" checkfield="#stock_code" checkrule="text:empty">
+                        <label for="stock_code" class="mandatory">
+                            <span>Stock Code</span>
+                            <span class="hidden">*</span>
+                        </label>
+                        <input class="medium ui-autocomplete-input" type="text" id="stock_code" name="stock_code" value="" placeholder="e.g. TLS" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                        <span class="form_error"><i class="fa fa-exclamation-triangle"></i></span>
+                    </div>
+                    <div class="input-box" checkfield="#asset_name" checkrule="text">
+                        <label id="asset_name_label" for="asset_name" class="mandatory">
+                            <span>Asset Name</span>
+                            <span>(required)</span>
+                        </label>
+                        <input type="text" id="asset_name" name="asset_name" value="" data-stockcode="" data-apir="" class="ui-autocomplete-input" autocomplete="off">
+                        <span class="form_error"><i class="fa fa-exclamation-triangle"></i></span>
+                    </div>
+                    <div class="input-box" checkfield="#listing_status" checkrule="text:empty">
+                        <label for="listing_status" class="mandatory">
+                            <span>Listing Status</span>
+                            <span>(required)</span>
+                        </label>
+                        <select id="listing_status" name="listing_status" class="medium" title="">
+                            <option value="x">Please Select</option>
+                            <option value="listed">Listed</option>
+                            <!-- <option value="delisted">Delisted</option> -->
+                            <option value="unlisted">Unlisted</option>
+                        </select>
+                        <span class="form_error"><i class="fa fa-exclamation-triangle"></i></span>
+                    </div>
+                    <div class="hidden input-box" checkfield="#hin" checkrule="hin:empty" style="display: none;">
+                        <label for="hin" class="mandatory">
+                            <span>HIN</span>
+                        </label>
+                        <input class="medium" type="text" id="hin" name="hin" value="" placeholder="e.g. X0001234567">
+                        <span class="form_error"><i class="fa fa-exclamation-triangle"></i></span>
+                    </div>
+                    <div class="hidden input-box" checkfield="#srn" checkrule="srn:empty" style="display: none;">
+                        <label for="srn" class="mandatory">
+                            <span>SRN</span>
+                        </label>
+                        <input class="medium" type="text" id="srn" name="srn" value="" placeholder="e.g. I0001234567">
+                        <span class="form_error"><i class="fa fa-exclamation-triangle"></i></span>
+                    </div>
+                    <div class="hidden input-box" checkfield="#holder_number" checkrule="text:empty" style="display: none;">
+                        <label for="holder_number" class="mandatory">
+                            <span>Holder Number</span>
+                        </label>
+                        <input class="medium" type="text" id="holder_number" name="holder_number" value="">
+                        <span class="form_error"><i class="fa fa-exclamation-triangle"></i></span>
+                    </div>
+                </div>
+            </fieldset>
+    </div>
+    <div id="formContent" style="display: block;"><fieldset class="standard" id="class_equities">
+        <legend><div><span>Equities</span> <a class="help" href="#"><i class="fa fa-question-circle"></i></a></div></legend>
+        <div class="col">
+            <div class="input-box" checkfield="#purchase_date" checkrule="date_fy">
+                <label class="mandatory" for="purchase_date"><span>Purchase Date</span>
+                    <span>(required)</span>
+                </label>
+                <input class="half purchase_date date hasDatepicker" type="text" id="purchase_date" name="purchase_date" value="">
+                <span class="form_error"><i class="fa fa-exclamation-triangle"></i></span>
+            </div>
+            <div class="input-box" checkfield="#total_price" checkrule="price">
+                <label for="total_price" class="mandatory">
+                    <span>Total Cost</span>
+                    <span>(required)</span>
+                </label>
+                <input class="half costs" type="numeric" id="total_price" name="total_price" value="">
+                <span class="form_error"><i class="fa fa-exclamation-triangle"></i></span>
+            </div>
+            <div class="input-box" checkfield="#volume" checkrule="numeric">
+                <label class="mandatory" for="volume"><span>Volume</span>
+                    <span>(required)</span>
+                </label>
+                <input class="half costs" type="text" id="volume" name="volume" value="">
+                <span class="form_error"><i class="fa fa-exclamation-triangle"></i></span>
+            </div>
+            <input type="hidden" id="unit_price" name="unit_price" value="">
+            <input type="hidden" id="transaction_costs" name="transaction_costs" value="">
+            <div class="input-box" checkfield="#account_subtype_member" checkrule="text">
+                <label for="account_subtype_member">From Account</label>
+                <select id="account_subtype_member" name="account_subtype_member">
+                    <option value="100|0">1-1000 Bank</option>
+                    <option value="101|0">1-1001 Bank</option>
+                    <option value="102|0">1-1002 anz</option>
+                </select>
+                <span class="form_error"><i class="fa fa-exclamation-triangle"></i></span>
+            </div>
+        </div>
+    </fieldset>
+    </div>
+    <div>
+        <input type="submit" id="saveAssetBtn" name="saveAssetBtn" class="button primary action" onclick="return aw_check('#asset');" value="Save Asset">
+        <input type="submit" id="saveAssetAddBtn" name="saveAssetAddBtn" class="button tertiary action" onclick="return aw_check('#asset');" value="Save &amp; Add Another">
+        <input type="button" class="button secondary action" onclick="location.href='https://jade-dev.mclowd.com/assets'; return false" value="Cancel">
+    </div>
+</form>

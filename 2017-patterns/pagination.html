@@ -1,12 +1,47 @@
-<ol class="pagination">
-<li><a href="#">1</a></li>
-<li><a href="#">2</a></li>
-<li><a href="#">3</a></li>
-<li><a href="#">4</a></li>
-<li><a>5</a></li>
-<li><a href="#">6</a></li>
-<li><a href="#">7</a></li>
-<li><a href="#">8</a></li>
-<li><a href="#">9</a></li>
-<li><a href="#">10</a></li>
-</ol>
+<h2>Mclowd Forum Pagination</h2>
+<div class="bbp-pagination">
+    <div class="bbp-pagination-count">
+        Viewing 15 topics - 1 through 15 (of 30 total)
+    </div>
+    <div class="bbp-pagination-links">
+        <span class="page-numbers current">1</span>
+        <a class="page-numbers" href="https://www.mclowd.com/support/forums/forum/getting-started-mclowd/page/2/">2</a>
+        <a class="next page-numbers" href="https://www.mclowd.com/support/forums/forum/getting-started-mclowd/page/2/">→</a>
+    </div>
+</div>
+
+<h2>DataTables Pagination</h2>
+<div class="dataTables_wrapper no-footer">
+    <div id="dt-length" class="left">
+        <div class="dataTables_length" id="manual_transactions_length">
+            <label>
+                Show
+                <select name="manual_transactions_length" aria-controls="manual_transactions" class="auto">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+                entries
+            </label>
+        </div>
+    </div>
+    <div id="dt-info" class="left">
+        <div class="dataTables_info" id="manual_transactions_info" role="status" aria-live="polite">Showing 1 to 10 of 65 entries</div>
+    </div>
+    <div id="dt-paging" class="right">
+        <div class="dataTables_paginate paging_simple_numbers">
+            <a class="paginate_button previous disabled" data-dt-idx="0" tabindex="0" id="manual_transactions_previous">Previous</a>
+            <span>
+                <a class="paginate_button current" aria-controls="manual_transactions" data-dt-idx="1" tabindex="0">1</a>
+                <a class="paginate_button " aria-controls="manual_transactions" data-dt-idx="2" tabindex="0">2</a>
+                <a class="paginate_button " aria-controls="manual_transactions" data-dt-idx="3" tabindex="0">3</a>
+                <a class="paginate_button " aria-controls="manual_transactions" data-dt-idx="4" tabindex="0">4</a>
+                <a class="paginate_button " aria-controls="manual_transactions" data-dt-idx="5" tabindex="0">5</a>
+                <a class="paginate_button " aria-controls="manual_transactions" data-dt-idx="6" tabindex="0">6</a>
+                <a class="paginate_button " aria-controls="manual_transactions" data-dt-idx="7" tabindex="0">7</a>
+            </span>
+            <a class="paginate_button next" aria-controls="manual_transactions" data-dt-idx="8" tabindex="0" id="manual_transactions_next">Next</a>
+        </div>
+    </div>
+</div>
